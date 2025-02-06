@@ -3,20 +3,22 @@ import os
 
 def resize(sizes, destination):
     try:
-        os.mkdir("./resizedImages")
+        os.mkdir(destination)
     except:
-        print("resizedImages folder exists!")
+        print(f"{destination} folder exists!")
 
     for i in os.listdir("./images"):
         try:
             image = Image.open(f"./images/{i}")
             print(i)
-            image.thumbnail((300, 300))
-            image.save(f"./resizedImages/resized_{i}")
+            for j in sizes:
+                image.thumbnail((j[0], j[1]))
+                image.save(f"./{destination}/{j[0]}_{i}")
 
         except Exception:
             print(Exception)
 
 
 
-
+if __name__ == "__main__":
+    resize([[300, 300]], "./webImages")
