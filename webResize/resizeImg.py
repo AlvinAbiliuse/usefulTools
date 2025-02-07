@@ -15,8 +15,8 @@ def resize(sizes, destination):
                 image.thumbnail((j[0], j[1]))
                 image.save(f"./{destination}/{j[0]}_{i}")
 
-        except Exception:
-            print(Exception)
+        except Exception as ext:
+            print(ext)
 
 
 
