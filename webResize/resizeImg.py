@@ -1,13 +1,14 @@
 from PIL import Image
 import os
+import sys
 
-def resize(sizes, destination):
+def resize(sizes, path,  destination):
     try:
         os.mkdir(destination)
     except:
         print(f"{destination} folder exists!")
 
-    for i in os.listdir("./images"):
+    for i in os.listdir(path):
         try:
             image = Image.open(f"./images/{i}")
             print(i)
@@ -21,4 +22,5 @@ def resize(sizes, destination):
 
 
 if __name__ == "__main__":
-    resize([[300, 300]], "./webImages")
+    os.makedirs("
+    resize([[300, 300], [600, 600]], sys.argv[1], "./webImages")
