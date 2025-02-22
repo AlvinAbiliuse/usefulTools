@@ -11,8 +11,6 @@ def move(location):
 
 
 def copy(argv):
-    print(argv[1])
-    print(len(os.listdir(f"./{argv[2]}")) - 1)
     if int(argv[1]) >= len(os.listdir(f"./{argv[2]}")) - 1:
         for i in range(len(os.listdir(f"./{argv[2]}"))):
             move(argv[2])
