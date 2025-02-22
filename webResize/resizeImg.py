@@ -10,9 +10,9 @@ def resize(sizes, path,  destination):
 
     for i in os.listdir(path):
         try:
-            image = Image.open(f"./images/{i}")
             print(i)
             for j in sizes:
+                image = Image.open(f"./{path}/{i}")
                 image.thumbnail((j[0], j[1]))
                 image.save(f"./{destination}/{j[0]}_{i}")
 
@@ -22,5 +22,5 @@ def resize(sizes, path,  destination):
 
 
 if __name__ == "__main__":
-    os.makedirs("
+    os.makedirs("./webImages", exist_ok=True)
     resize([[300, 300], [600, 600]], sys.argv[1], "./webImages")
