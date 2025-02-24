@@ -1,6 +1,10 @@
+#! /usr/bin/python3
+
 from PIL import Image
 import os
 import sys
+
+# USAGE: resizeImg.py <path>
 
 def resize(sizes, path,  destination):
     try:
