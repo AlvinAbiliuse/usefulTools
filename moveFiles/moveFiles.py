@@ -10,7 +10,7 @@ import random
 def move(location):
     paths = os.listdir(f"./{location}")
     p = paths[random.randint(0, len(paths) - 1)]
-    print(f"moved {p}")
+    print(f"moved {p} \n")
     shutil.move(f"./{location}/{p}", "./")
 
 
