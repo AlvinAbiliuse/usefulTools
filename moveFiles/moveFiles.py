@@ -1,10 +1,11 @@
 #! /usr/bin/python3
 
-
 import os
 import sys
 import shutil
 import random
+
+# USAGE: moveFiles.py <number of files> <path>
 
 def move(location):
     paths = os.listdir(f"./{location}")
