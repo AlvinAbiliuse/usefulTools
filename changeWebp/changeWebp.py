@@ -5,6 +5,8 @@ import shutil
 from PIL import Image
 import sys
 
+# USAGE: changeWebp.py <path>
+
 arg = sys.argv[1]
 
 for i in os.listdir(arg):
